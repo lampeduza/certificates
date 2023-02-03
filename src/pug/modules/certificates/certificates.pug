@@ -11,3 +11,11 @@ include certificates-data
           time(datetime=image.datetime)
             .
               Дата прохождения курса - #[span #{image.date}]
+          .certificates__additional
+            h3 На данном курсе я научился:
+            ol
+              if image.technologies
+                each technology in image.technologies
+                  li= technology
+
+              
