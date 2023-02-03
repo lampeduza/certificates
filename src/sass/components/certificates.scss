@@ -1,0 +1,40 @@
+@use './global/library.scss' as lib;
+
+.certificates__container {
+	margin: 50px 0;
+
+	h1 {
+		margin-bottom: 50px;
+		font-size: 36px;
+		color: #000;
+	}
+
+	ul {
+		@include lib.reset-list;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		align-items: start;
+		justify-items: center;
+		gap: 80px 20px;
+	}
+
+	picture {
+		margin-bottom: 10px;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	h2 {
+		color: #000;
+		margin-bottom: 10px;
+		min-height: 40px;
+	}
+
+	span {
+		color: #000;
+		font-size: 11px;
+		text-decoration: underline;
+	}
+}

@@ -1,0 +1,13 @@
+include certificates-data
+
+.certificates
+  .certificates__container
+    h1 Мои сертификаты
+    ul
+      each image in images
+        li
+          h2= image.title
+          +picture(`${image.src}`, 'jpg', '300', '500', `${image.title}`, `${image.alternative}`)
+          time(datetime=image.datetime)
+            .
+              Дата прохождения курса - #[span #{image.date}]
